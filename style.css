@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    background: #242933;
+    height: 100vh;
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 0 auto;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+.card {
+    height: 700px;
+    width: 500px;
+    background: #2D323C;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-wrapper {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: 20px solid #3D414E;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 6%;
+    
+    
+}
+
+.img {
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 8px solid #BD7BCD;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 4.5rem;
+    margin: 150px 0 0;
+    padding: 0;
+    background: linear-gradient(to right, #A361B0 10%, #EB6F7C 100%);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}
+
+h2{
+    font-size: 4.5rem;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #A361B0 40%, #EB6F7C 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+p{
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 50px;
+    color: #94989E;
+    line-height: 2rem;
+}
+
+.icon {
+    background-color: #3D414E;
+    color: #BD7BCD;
+    height: 60px;
+    width: 60px;
+    margin-top: 30px;
+    border-radius: 50%;
+    font-size: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: mover 0.5s infinite  alternate;
+}
+
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(10px); }
+}
+
+.dot-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    bottom: -58px;
+    position: absolute;
+    
+}
+
+.dot {
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: #BD7BCD;
+    transition-property: all;
+    animation: loading 1s linear infinite;
+}
+
+
+  
+  @keyframes loading {
+      0% {opacity: 1;}
+      100% {opacity: 0;}
+  }
+
+  .dot-wrapper .dot:nth-child(1) {animation-delay: 100ms;}
+  .dot-wrapper .dot:nth-child(2) {animation-delay: 200ms;}
+  .dot-wrapper .dot:nth-child(3) {animation-delay: 300ms;}
+  .dot-wrapper .dot:nth-child(4) {animation-delay: 400ms;}
+
+  .circle {
+    width: 10px; 
+    height: 10px;
+    background: rgba(11, 95, 190, 0.589);
+    margin: 0px 10px;
+    transform-origin: top center;
+    animation: spin 1s linear infinite;
+    opacity: 0.5;
+  }
+  @keyframes spin {
+    0% {transform: scale(3);}
+    50% {transform:scale(0.2);}
+    100% {transform: scale(3);}
+  }
+  .row {
+    display: flex;
+    flex: 0 1 100%;
+    gap:70px;
+    margin-bottom: 3.5rem;
+  }
+  .row:nth-child(1) .circle {animation-delay: 100ms;} 
+  .row:nth-child(2) .circle {animation-delay: 200ms;} 
+  .row:nth-child(3) .circle {animation-delay: 300ms;} 
+  .row:nth-child(4) .circle {animation-delay: 400ms;} 
+  .row:nth-child(5) .circle {animation-delay: 500ms;} 
+  .row:nth-child(6) .circle {animation-delay: 600ms;} 
+  .row:nth-child(7) .circle {animation-delay: 700ms;} 
+  .row:nth-child(8) .circle {animation-delay: 800ms;} 
+  .row:nth-child(9) .circle {animation-delay: 900ms;} 
+  .row:nth-child(10) .circle {animation-delay: 1000ms;} 
+  .row:nth-child(11) .circle {animation-delay: 1100ms;} 
+
+  @media only screen and (max-width: 700px){
+      h1 {
+          margin-top: 13rem;
+          font-size: 3rem;
+      }
+      h2 {
+          font-size: 3rem;
+      }
+      p {
+          font-size: 1rem;
+      }
+      .card {
+          width: max-content;
+          height: max-content;
+          padding: 1rem;
+      }
+  }
